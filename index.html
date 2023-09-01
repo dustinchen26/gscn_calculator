@@ -21,11 +21,6 @@
             margin-bottom: 0.1em;
         }
 		
-    /* 好看一點的表格樣式，可選用 */
-    table {
-      border-collapse: collapse;
-    }
-	
     th, td {
       border: 1px solid black;
       padding: 8px;
@@ -33,10 +28,7 @@
 	  line-height: 0.1; /*  將行高設置為原來的0.1倍 */
     }
 
-    /* 設置最小行高 */
-    table {
-      table-layout: fixed;
-    }
+
 
     td, th {
       height: 1px;
@@ -67,19 +59,28 @@
 			font-size: 13.5px; /* 调整为你想要的字体大小，单位可以是px、em、rem等 */
         }
 
-    /* Style to display tables inline */
-    .inline-table {
-			font-size: 12px; /* 設置較小的字體大小 */
-            display: inline-block;
-            margin-right: 10px; /* Add some space between tables */
+/* Style to display tables inline */
+.table-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.inline-table {
+  margin-right: 10px; /* Adjust the margin as needed for minimum spacing */
+}
+
+.inline-table:last-child {
+  margin-right: 0; /* Remove margin from the last table */
+}
+
+    /* 好看一點的表格樣式，可選用 */
+    table {
+      border-collapse: collapse;
     }
-		
-    .table-container {
-			margin-left: 100px; /* move the table right */	
-			font-size: 12px; /* 設置較小的字體大小 */
-            display: inline-block;
-            margin-right: 12px; /* Add some space between tables */	  
-    }		
+    /* 設置最小行高 */
+    table {
+      table-layout: fixed;
+    }
 
     ul {
         margin-top: 0; /* 去除上边距 */
@@ -595,220 +596,218 @@ console.log("nrBandIndex=", nrBandIndex);
 	5M=11RB</p> 
 	-->
 
-  <div class="table-container">
+<br>
+<div class="table-container">
+  <div class="inline-table">
+    <p><b>38.101-1 Table 5.3.2-1 SCS=30</b></p>
     <table>
+        <tr>
+          <th>BW(MHz)</th>
+          <th>carrierBw(RB)</th>
+        </tr>
+        <tr>
+          <td style="color: blue;">100</td>
+          <td style="color: blue;">273</td>
+        </tr>
+        <tr>
+          <td>90</td>
+          <td>245</td>
+        </tr>
+        <tr>
+          <td>80</td>
+          <td>217</td>
+        </tr>
+        <tr>
+          <td>60</td>
+          <td>162</td>
+        </tr>
+        <tr>
+          <td>50</td>
+          <td>133</td>
+        </tr>
+        <tr>
+          <td>40</td>
+          <td>106</td>
+        </tr>
+        <tr>
+          <td>30</td>
+          <td>78</td>
+        </tr>
+        <tr>
+          <td>25</td>
+          <td>65</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>51</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>38</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>24</td>
+        </tr>
+      </table>
+    </div>
 
-    <!-- 1st table -->
-    <div class="inline-table">
-	<p><b>38.101-1 Table 5.3.2-1 SCS=30</b></p>	
-  <table>
-    <tr>
-      <th>BW(MHz)</th>
-      <th>carrierBw(RB)</th>
-    </tr>
-    <tr>
-      <td style="color: blue;">100</td>
-      <td style="color: blue;">273</td>
-    </tr>
-    <tr>
-      <td>90</td>
-      <td>245</td>
-    </tr>
-    <tr>
-      <td>80</td>
-      <td>217</td>
-    </tr>
-    <tr>
-      <td>60</td>
-      <td>162</td>
-    </tr>
-    <tr>
-      <td>50</td>
-      <td>133</td>
-    </tr>
-    <tr>
-      <td>40</td>
-      <td>106</td>
-    </tr>
-    <tr>
-      <td>30</td>
-      <td>78</td>
-    </tr>
-    <tr>
-      <td>25</td>
-      <td>65</td>
-    </tr>
-    <tr>
-      <td>20</td>
-      <td>51</td>
-    </tr>
-    <tr>
-      <td>15</td>
-      <td>38</td>
-    </tr>
-    <tr>
-      <td>10</td>
-      <td>24</td>
-    </tr>
-  </table>
+  <div class="inline-table">
+    <p><b>38.213 Table 13-4: {30,30} miniBW 5 or 10 MHz</b></p>
+    <table>
+        <tr>
+          <th>Index</th>
+          <th>coreset0numRBs</th>
+          <th>coreset0OffsetRB</th>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>24</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>24</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>24</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>24</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>24</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>24</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>24</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>24</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>24</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>24</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td style="color: blue;">10</td>
+          <td style="color: blue;">48</td>
+          <td style="color: blue;">12</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>48</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>48</td>
+          <td>16</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>48</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>48</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>48</td>
+          <td>16</td>
+        </tr>
+      </table>
     </div>
-	
-    <!-- 2nd table -->
-    <div class="inline-table">
-	<p><b>&nbsp;&nbsp;&nbsp;38.213 Table 13-4: {30,30} miniBW 5 or 10 MHz</b></p>	
-  <table>
-    <tr>
-      <th>Index</th>
-      <th>coreset0numRBs</th>
-      <th>coreset0OffsetRB</th>
-    </tr>
-    <tr>
-      <td>0</td>
-      <td>24</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>24</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>24</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>24</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>24</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>24</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>24</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>24</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>24</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>24</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <td style="color: blue;">10</td>
-      <td style="color: blue;">48</td>
-      <td style="color: blue;">12</td>
-    </tr>
-    <tr>
-      <td>11</td>
-      <td>48</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <td>12</td>
-      <td>48</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <td>13</td>
-      <td>48</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <td>14</td>
-      <td>48</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <td>15</td>
-      <td>48</td>
-      <td>16</td>
-    </tr>
-  </table>
-    </div>
-	
-    <!-- 3rd table -->
-    <div class="inline-table">
-	<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;38.213 Table 13-6: {30,30} miniBW 40 MHz</b></p>	
-  <table>
-    <tr>
-      <th>Index</th>
-      <th>coreset0numRBs</th>
-      <th>coreset0OffsetRB</th>
-    </tr>
-    <tr>
-      <td>0</td>
-      <td>24</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>24</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>24</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>24</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <td style="color: blue;">4</td>
-      <td style="color: blue;">48</td>
-      <td style="color: blue;">0</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>48</td>
-      <td>28</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>48</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>48</td>
-      <td>28</td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>48</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>48</td>
-      <td>28</td>
-    </tr>
-  </table>
-    </div>
-	
+
+  <div class="inline-table">
+    <p><b>38.213 Table 13-6: {30,30} miniBW 40 MHz</b></p>
+    <table>
+        <tr>
+          <th>Index</th>
+          <th>coreset0numRBs</th>
+          <th>coreset0OffsetRB</th>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>24</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>24</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>24</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>24</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td style="color: blue;">4</td>
+          <td style="color: blue;">48</td>
+          <td style="color: blue;">0</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>48</td>
+          <td>28</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>48</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>48</td>
+          <td>28</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>48</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>48</td>
+          <td>28</td>
+        </tr>
     </table>
   </div>
+
+  <div class="inline-table">
+    <img src="https://raw.githubusercontent.com/dustinchen26/gscn_calculator/master/ssb_final.png" alt="GitHub Image" width="500">
+  </div>
+</div>
 
     <li>
       <strong>Please input</strong>
